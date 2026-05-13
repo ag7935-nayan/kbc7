@@ -1,0 +1,17 @@
+[
+  {"q":"Which city is the capital of India?","o":["Mumbai","New Delhi","Kolkata","Chennai"],"c":1},
+  {"q":"How many days are in a leap year?","o":["364","365","366","367"],"c":2},
+  {"q":"Which planet is known as the Red Planet?","o":["Venus","Jupiter","Mars","Saturn"],"c":2},
+  {"q":"In cricket, how many runs when the ball clears the boundary on the full?","o":["4","6","3","8"],"c":1},
+  {"q":"What is the national animal of India?","o":["Lion","Elephant","Bengal Tiger","Leopard"],"c":2},
+  {"q":"Who wrote India's national anthem \"Jana Gana Mana\"?","o":["Bankim Chandra Chatterjee","Rabindranath Tagore","Sarojini Naidu","Sri Aurobindo"],"c":1},
+  {"q":"What is the chemical symbol for Gold?","o":["Ag","Au","Fe","Cu"],"c":1},
+  {"q":"Which is the longest river in the world?","o":["Amazon","Nile","Yangtze","Mississippi"],"c":1},
+  {"q":"In which year did India win its first Cricket World Cup?","o":["1975","1979","1983","1987"],"c":2},
+  {"q":"Which film won the Oscar for Best Picture for the year 1997?","o":["Braveheart","Gladiator","Titanic","Shakespeare in Love"],"c":2},
+  {"q":"Who was the first Indian woman to win an Olympic medal?","o":["P.T. Usha","Mary Kom","Karnam Malleswari","Saina Nehwal"],"c":2},
+  {"q":"Which is the smallest bone in the human body?","o":["Femur","Stapes","Tibia","Fibula"],"c":1},
+  {"q":"\"Tirthankara\" is most closely associated with which religion?","o":["Buddhism","Hinduism","Jainism","Sikhism"],"c":2},
+  {"q":"What does HTTP stand for?","o":["HyperText Transfer Protocol","HyperText Transmission Process","HyperText Transfer Process","HyperText Transmission Protocol"],"c":0},
+  {"q":"Which Mughal Emperor commissioned the Jama Masjid in Delhi?","o":["Akbar","Jahangir","Aurangzeb","Shah Jahan"],"c":3}
+]
