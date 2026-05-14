@@ -1,0 +1,17 @@
+[
+  {"q":"What is the capital of India?","o":["Mumbai","New Delhi","Kolkata","Chennai"],"c":1},
+  {"q":"Which is the smallest prime number?","o":["1","2","3","0"],"c":1},
+  {"q":"Plants make food using which process?","o":["Respiration","Digestion","Photosynthesis","Evaporation"],"c":2},
+  {"q":"Which gas do humans breathe in?","o":["Carbon dioxide","Oxygen","Nitrogen","Hydrogen"],"c":1},
+  {"q":"How many sides does a hexagon have?","o":["5","6","7","8"],"c":1},
+  {"q":"What is 144 ÷ 12?","o":["10","11","12","14"],"c":2},
+  {"q":"Which planet is known as the Red Planet?","o":["Venus","Mars","Saturn","Mercury"],"c":1},
+  {"q":"Which is the longest river in India?","o":["Yamuna","Godavari","Ganga","Krishna"],"c":2},
+  {"q":"How many continents are there?","o":["5","6","7","8"],"c":2},
+  {"q":"What is the freezing point of water in Celsius?","o":["0°","32°","100°","-10°"],"c":0},
+  {"q":"Which festival is known as the Festival of Lights?","o":["Holi","Diwali","Eid","Onam"],"c":1},
+  {"q":"Who wrote the Indian National Anthem?","o":["Bankim Chandra","Rabindranath Tagore","Sarojini Naidu","Tulsidas"],"c":1},
+  {"q":"Which is the tallest mountain in the world?","o":["K2","Kangchenjunga","Everest","Nanda Devi"],"c":2},
+  {"q":"What is 25 x 4?","o":["75","100","125","150"],"c":1},
+  {"q":"Which organ pumps blood in the body?","o":["Lungs","Brain","Heart","Liver"],"c":2}
+]

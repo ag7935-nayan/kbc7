@@ -1,0 +1,17 @@
+[
+  {"q":"How many days are in a week?","o":["5","6","7","8"],"c":2},
+  {"q":"Which animal says 'Meow'?","o":["Dog","Cat","Cow","Goat"],"c":1},
+  {"q":"What colour do you get by mixing red and yellow?","o":["Green","Purple","Orange","Pink"],"c":2},
+  {"q":"How many legs does a spider have?","o":["6","8","10","4"],"c":1},
+  {"q":"Which is the largest planet in our Solar System?","o":["Earth","Mars","Jupiter","Venus"],"c":2},
+  {"q":"What is 7 + 5?","o":["10","11","12","13"],"c":2},
+  {"q":"Which shape has three sides?","o":["Square","Triangle","Circle","Rectangle"],"c":1},
+  {"q":"Which is the national animal of India?","o":["Lion","Elephant","Tiger","Peacock"],"c":2},
+  {"q":"What do bees make?","o":["Milk","Honey","Silk","Bread"],"c":1},
+  {"q":"How many colours are in a rainbow?","o":["5","6","7","8"],"c":2},
+  {"q":"Which is the biggest ocean?","o":["Atlantic","Indian","Arctic","Pacific"],"c":3},
+  {"q":"What is 9 x 3?","o":["18","24","27","30"],"c":2},
+  {"q":"Which fruit is yellow and curved?","o":["Apple","Banana","Grape","Orange"],"c":1},
+  {"q":"How many months are in a year?","o":["10","11","12","13"],"c":2},
+  {"q":"Which is the closest star to Earth?","o":["Moon","Sun","Mars","Sirius"],"c":1}
+]

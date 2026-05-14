@@ -1,0 +1,17 @@
+[
+  {"q":"Who wrote 'Discovery of India'?","o":["Mahatma Gandhi","Jawaharlal Nehru","Rabindranath Tagore","B.R. Ambedkar"],"c":1},
+  {"q":"What is the chemical symbol for Gold?","o":["Ag","Au","Gd","Go"],"c":1},
+  {"q":"In which year did India gain independence?","o":["1942","1945","1947","1950"],"c":2},
+  {"q":"What is the smallest unit of life?","o":["Atom","Tissue","Cell","Organ"],"c":2},
+  {"q":"Who is known as the Father of Geometry?","o":["Pythagoras","Euclid","Archimedes","Aryabhata"],"c":1},
+  {"q":"Which Indian won the Nobel Prize in Physics in 1930?","o":["Homi Bhabha","C.V. Raman","S. Chandrasekhar","Vikram Sarabhai"],"c":1},
+  {"q":"What is the speed of light (approx)?","o":["3×10^5 km/s","3×10^8 m/s","3×10^6 m/s","3×10^10 m/s"],"c":1},
+  {"q":"Which is the largest gland in the human body?","o":["Pancreas","Thyroid","Liver","Adrenal"],"c":2},
+  {"q":"Who founded the Maurya dynasty?","o":["Ashoka","Bindusara","Chandragupta Maurya","Bimbisara"],"c":2},
+  {"q":"Which acid is found in lemons?","o":["Acetic acid","Citric acid","Lactic acid","Formic acid"],"c":1},
+  {"q":"What is 2^10?","o":["512","1000","1024","2048"],"c":2},
+  {"q":"Which is the longest river in the world?","o":["Amazon","Nile","Yangtze","Mississippi"],"c":1},
+  {"q":"What does 'HTTP' stand for?","o":["HyperText Transfer Protocol","HighText Transfer Protocol","HyperTool Transmission Protocol","HyperText Transmission Process"],"c":0},
+  {"q":"Who painted the ceiling of the Sistine Chapel?","o":["Leonardo da Vinci","Raphael","Michelangelo","Donatello"],"c":2},
+  {"q":"Which is the smallest bone in the human body?","o":["Femur","Stapes","Tibia","Fibula"],"c":1}
+]

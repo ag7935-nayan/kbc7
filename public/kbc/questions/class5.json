@@ -1,0 +1,17 @@
+[
+  {"q":"Which is the largest desert in the world?","o":["Sahara","Gobi","Thar","Antarctic"],"c":3},
+  {"q":"What is the chemical symbol for water?","o":["O2","H2O","CO2","HO"],"c":1},
+  {"q":"Who invented the telephone?","o":["Edison","Bell","Tesla","Marconi"],"c":1},
+  {"q":"How many bones are there in an adult human body?","o":["196","206","216","226"],"c":1},
+  {"q":"Which is the smallest country in the world?","o":["Monaco","Maldives","Vatican City","Nauru"],"c":2},
+  {"q":"What is the LCM of 4 and 6?","o":["10","12","18","24"],"c":1},
+  {"q":"Which Indian state is called the Land of Five Rivers?","o":["Haryana","Punjab","Kerala","Gujarat"],"c":1},
+  {"q":"Who painted the Mona Lisa?","o":["Van Gogh","Picasso","Leonardo da Vinci","Michelangelo"],"c":2},
+  {"q":"Which planet has the most moons?","o":["Jupiter","Saturn","Uranus","Neptune"],"c":1},
+  {"q":"How many players are in a cricket team?","o":["9","10","11","12"],"c":2},
+  {"q":"What is 15% of 200?","o":["20","25","30","35"],"c":2},
+  {"q":"Which is the national flower of India?","o":["Rose","Lotus","Sunflower","Marigold"],"c":1},
+  {"q":"Which language has the most native speakers?","o":["English","Mandarin","Hindi","Spanish"],"c":1},
+  {"q":"What does the Sun mainly consist of?","o":["Rock","Iron","Hydrogen and Helium","Water"],"c":2},
+  {"q":"Which is the largest mammal in the world?","o":["Elephant","Blue Whale","Giraffe","Polar Bear"],"c":1}
+]

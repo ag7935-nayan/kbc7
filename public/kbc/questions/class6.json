@@ -1,0 +1,17 @@
+[
+  {"q":"Who was the first Prime Minister of India?","o":["Mahatma Gandhi","Sardar Patel","Jawaharlal Nehru","Rajendra Prasad"],"c":2},
+  {"q":"What is the SI unit of force?","o":["Joule","Watt","Newton","Pascal"],"c":2},
+  {"q":"Which Mughal emperor built the Taj Mahal?","o":["Akbar","Shah Jahan","Aurangzeb","Babur"],"c":1},
+  {"q":"What is the value of π (pi) to two decimal places?","o":["3.12","3.14","3.16","3.18"],"c":1},
+  {"q":"Which gas is most abundant in Earth's atmosphere?","o":["Oxygen","Carbon dioxide","Nitrogen","Argon"],"c":2},
+  {"q":"Who wrote the play 'Romeo and Juliet'?","o":["Charles Dickens","William Shakespeare","Mark Twain","John Keats"],"c":1},
+  {"q":"Which is the hardest natural substance?","o":["Gold","Iron","Diamond","Quartz"],"c":2},
+  {"q":"How many degrees are there in a right angle?","o":["45","60","90","180"],"c":2},
+  {"q":"Which Indian river is called the Ganga of the South?","o":["Krishna","Godavari","Cauvery","Narmada"],"c":1},
+  {"q":"What is the square root of 169?","o":["11","12","13","14"],"c":2},
+  {"q":"Who discovered penicillin?","o":["Louis Pasteur","Alexander Fleming","Marie Curie","Edward Jenner"],"c":1},
+  {"q":"Which Indian city is called the Pink City?","o":["Jodhpur","Udaipur","Jaipur","Bikaner"],"c":2},
+  {"q":"Which planet is closest to the Sun?","o":["Venus","Mercury","Earth","Mars"],"c":1},
+  {"q":"What does CPU stand for?","o":["Central Processing Unit","Computer Personal Unit","Control Power Unit","Central Power Unit"],"c":0},
+  {"q":"Who gave the law of gravitation?","o":["Einstein","Galileo","Newton","Kepler"],"c":2}
+]

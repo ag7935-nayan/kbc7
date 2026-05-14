@@ -1,0 +1,17 @@
+# Render.com deployment config
+# Deploys the KBC game as a static site (no build step needed).
+services:
+  - type: web
+    name: kbc-quiz
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./public
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /kbc/*.json
+        name: Cache-Control
+        value: no-cache
+    routes:
+      - type: rewrite
+        source: /
+        destination: /kbc/index.html

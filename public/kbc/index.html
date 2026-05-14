@@ -432,8 +432,11 @@ html,body{height:100%;width:100%;overflow:hidden;user-select:none;-webkit-user-s
   box-shadow:0 0 40px rgba(255,215,0,.4);
   transition:transform .15s,box-shadow .15s;
 }
-.popup-start:hover{transform:scale(1.04);box-shadow:0 0 65px rgba(255,215,0,.65)}
-.popup-start:active{transform:scale(.97)}
+.popup-start:hover:not(:disabled){transform:scale(1.04);box-shadow:0 0 65px rgba(255,215,0,.65)}
+.popup-start:active:not(:disabled){transform:scale(.97)}
+.popup-start:disabled{opacity:.5;cursor:not-allowed}
+select.popup-input{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,#00c8ff 50%),linear-gradient(135deg,#00c8ff 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 12px) 50%;background-size:6px 6px,6px 6px;background-repeat:no-repeat;padding-right:38px}
+select.popup-input option{background:#040e22;color:#dde8ff}
 
 /* Player badge in game */
 .player-badge{
@@ -477,9 +480,16 @@ html,body{height:100%;width:100%;overflow:hidden;user-select:none;-webkit-user-s
       </div>
       <div class="popup-field">
         <label class="popup-label" for="inp-class">YOUR CLASS</label>
-        <input class="popup-input" id="inp-class" type="text" placeholder="e.g. Class 8 — A" maxlength="20" autocomplete="off"/>
+        <select class="popup-input" id="inp-class">
+          <option value="" disabled selected>Select your class</option>
+          <option value="3 Aqua">3 Aqua</option>
+          <option value="4 Aqua">4 Aqua</option>
+          <option value="5 Aqua">5 Aqua</option>
+          <option value="6 Aqua">6 Aqua</option>
+          <option value="7 Aqua">7 Aqua</option>
+        </select>
       </div>
-      <button class="popup-start" id="btnStart">LET'S PLAY!</button>
+      <button class="popup-start" id="btnStart" disabled>LET'S PLAY!</button>
     </div>
     <div class="popup-divider"></div>
     <div class="lb-wrap">
@@ -926,24 +936,44 @@ const renderLB=()=>{
   }).join('')+'</div>';
 };
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const showPopup=()=>{$('popup-overlay').classList.remove('hide');renderLB()};
-const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const showPopup=()=>{$('popup-overlay').classList.remove('hide');renderLB()};
+const showPopup=()=>{$('popup-overlay').classList.remove('hide');renderLB();syncStartBtn();};
 
 /* ── POPUP LOGIC ── */
-$('btnStart').addEventListener('click',()=>{
+const CLASS_FILE={'3 Aqua':'class3','4 Aqua':'class4','5 Aqua':'class5','6 Aqua':'class6','7 Aqua':'class7'};
+const syncStartBtn=()=>{
+  const ok=$('inp-name').value.trim()&&$('inp-class').value;
+  $('btnStart').disabled=!ok;
+};
+$('inp-name').addEventListener('input',syncStartBtn);
+$('inp-class').addEventListener('change',syncStartBtn);
+
+$('btnStart').addEventListener('click',async()=>{
   const name=$('inp-name').value.trim();
-  const cls=$('inp-class').value.trim();
+  const cls=$('inp-class').value;
   if(!name){$('inp-name').focus();$('inp-name').style.borderColor='rgba(255,80,80,.7)';return}
+  if(!cls){return}
   $('inp-name').style.borderColor='';
+  const file=CLASS_FILE[cls];
+  if(!file){alert('Invalid class');return}
+  const btn=$('btnStart');const orig=btn.textContent;btn.disabled=true;btn.textContent='LOADING…';
+  try{
+    const r=await fetch('kbc/questions/'+file+'.json',{cache:'no-cache'});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const data=await r.json();
+    if(!Array.isArray(data)||!data.length)throw new Error('Empty');
+    QS=data;
+  }catch(err){
+    console.error('Failed to load questions',err);
+    alert('Could not load questions for '+cls);
+    btn.disabled=false;btn.textContent=orig;return;
+  }
+  btn.textContent=orig;
   playerName=name;playerClass=cls;
   $('popup-overlay').classList.add('hide');
 });
 
-// Allow Enter key on inputs
-[$('inp-name'),$('inp-class')].forEach(el=>{
-  el.addEventListener('keydown',e=>{if(e.key==='Enter')$('btnStart').click()});
-});
+// Allow Enter key on name input
+$('inp-name').addEventListener('keydown',e=>{if(e.key==='Enter'&&!$('btnStart').disabled)$('btnStart').click()});
 
 /* ── EVENTS ── */
 $('btnPlay').addEventListener('click',startGame);
@@ -971,17 +1001,11 @@ $('snd').addEventListener('click',()=>{
 
 renderLadder();
 renderLB();
-fetch('/kbc/leaderboard.json',{cache:'no-cache'})
+syncStartBtn();
+fetch('kbc/leaderboard.json',{cache:'no-cache'})
   .then(r=>r.ok?r.json():[])
   .then(data=>{if(Array.isArray(data))lbSeed=data;renderLB();})
   .catch(()=>{});
-
-/* ── LOAD QUESTIONS ── */
-$('btnPlay').disabled=true;
-fetch('/kbc/questions.json',{cache:'no-cache'})
-  .then(r=>r.json())
-  .then(data=>{QS=data;$('btnPlay').disabled=false;})
-  .catch(err=>{console.error('Failed to load questions',err);alert('Could not load questions.json');});
 </script>
 </body>
 </html>
