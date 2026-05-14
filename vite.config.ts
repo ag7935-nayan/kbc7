@@ -21,5 +21,9 @@ export default defineConfig({
         "kbc-main-main.onrender.com",
       ],
     },
+
+    build: {
+      outDir: "dist",
+    },
   },
 });
